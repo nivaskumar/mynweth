@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather APP</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+		<style>
+		.we-background {
+    background: #74b3e7 url(images/background.jpg) 50% 50% no-repeat;
+    background-size: cover;
+}.we-panel-box {
+    padding: 25px;
+    background: #fff;
+    color: #666;
+	    min-width: 400px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.09);
+}
+.uk-form input[type="text"], .uk-form input[type="password"], .uk-form input[type="datetime"], .uk-form input[type="datetime-local"], .uk-form input[type="date"], .uk-form input[type="month"], .uk-form input[type="time"], .uk-form input[type="week"], .uk-form input[type="number"], .uk-form input[type="email"], .uk-form input[type="url"], .uk-form input[type="search"], .uk-form input[type="tel"], .uk-form input[type="color"] {
+    height: 35px;
+    max-width: 100%;
+    padding: 4px 6px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    color: #666;
+    -webkit-transition: all .2s linear;
+    -webkit-transition-property: border,background,color,box-shadow,padding;
+    transition: all .2s linear;
+    transition-property: border,background,color,box-shadow,padding;
+    border-radius: 2px;
+}
+	</style>
+    </head>
+    <body>
+	
+	 <div id="installer" class="we-background uk-height-viewport uk-flex uk-flex-center uk-flex-middle" >
+            <div class="tm-container">
+
+               
+
+                <div class="uk-panel we-panel-box" >
+                    <div v-pre>
+
+                        <h1 class="uk-margin-small-bottom uk-text-center">Weather</h1>
+                        <div class="uk-margin-large-bottom uk-text-muted uk-text-center">Search city weather </div>
+<% if(weather !==null){ %>
+	<p class="uk-form-help-block uk-text-success uk-tile uk-tile-muted uk-padding-small"><%= weather %></p>
+	<% } %>
+	<% if(error !==null){ %>
+	<p class="uk-form-help-block uk-text-danger  uk-tile uk-tile-muted uk-padding-small "><%= error %>
+	<% } %>
+                        <form class="uk-form"  action="/" method="post">
+
+                              <input class="uk-search-input" type="search" name="city" placeholder="Enter City here">
+
+                            <p class="uk-text-right">
+                                <button class="uk-button uk-button-primary" type="submit">
+                                    <span class="uk-flex-inline uk-flex-middle">Find
+                                    </span>
+                                </button>
+                            </p>
+                        </form>
+
+                    </div>
+
+                </div>
+
+                
+
+                
+
+
+            </div>
+        </div>
+
+
+    </body>
+</html>
